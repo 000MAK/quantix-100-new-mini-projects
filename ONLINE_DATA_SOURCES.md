@@ -47,5 +47,6 @@ This repository downloads data at runtime. Data files are not committed to GitHu
 - PyTorch: BSD-style — https://github.com/pytorch/pytorch/blob/main/LICENSE
 - Pillow: HPND license — https://github.com/python-pillow/Pillow/blob/main/LICENSE
 - Hugging Face Datasets: Apache-2.0 — https://github.com/huggingface/datasets/blob/main/LICENSE
+- Hugging Face Hub client: Apache-2.0 — https://github.com/huggingface/huggingface_hub/blob/main/LICENSE
 
 The exact installed versions depend on the environment; see requirements-online.txt. Review all upstream notices before redistribution or commercial use. No API credentials, data archives, audio, or image files are stored in this repository.
