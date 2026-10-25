@@ -351,7 +351,7 @@ def run_evt_bike_daily(bike_day: pd.DataFrame) -> dict[str, Any]:
         "exceedance_count": int(len(exceedances)),
         "gpd_shape_estimate": float(shape),
         "gpd_scale_estimate": float(scale),
-        "synthetic_context_free_dataset_q99_demand_estimate": float(q99),
+        "estimated_99th_percentile_daily_bike_demand": float(q99),
         "note": "This is a tail-analysis illustration on bike demand, not an insurance loss or financial risk estimate.",
     }}
 
