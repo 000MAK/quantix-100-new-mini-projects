@@ -8,8 +8,7 @@ import pandas as pd
 import torch
 from scipy.io import wavfile
 from audio_fsdd_cnn import AudioDigitCNN, load_fsdd_arrays
-from online_research_models import run_online_models
-from online_model_extensions import run_additional_models
+from run_20_models import run_all_online_models
 from vision_beans_cnn import BeansCNN
 
 def make_wine_frame(n: int = 160, seed: int = 42) -> pd.DataFrame:
@@ -57,11 +56,12 @@ class OnlineModelTests(unittest.TestCase):
     def test_twenty_online_model_functions_accept_dataframes_without_network(self):
         wine = make_wine_frame()
         hourly, daily = make_bike_frames()
-        first = run_online_models(wine=wine, bike_hour=hourly, bike_day=daily, seed=11)["results"]
-        second = run_additional_models(wine=wine, bike_hour=hourly, seed=11)
-        combined = first + second
+        report = run_all_online_models(wine=wine, bike_hour=hourly, bike_day=daily, seed=11)
+        combined = report["results"]
+        self.assertEqual(report["model_count"], 20)
         self.assertEqual(len(combined), 20)
         self.assertEqual(len({item["model"] for item in combined}), 20)
+        self.assertEqual(len(report["sources"]), 2)
         for item in combined:
             self.assertTrue(item["metrics"])
             for key, value in item["metrics"].items():
