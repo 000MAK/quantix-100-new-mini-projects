@@ -19,6 +19,12 @@ The collection covers small, focused tasks such as text processing, validation, 
 | [Mini Expense Tracker](https://github.com/000MAK/mini-expense-tracker) | Local SQLite expense entries and totals grouped by currency |
 | [Mini Freelance Rate Calculator](https://github.com/000MAK/mini-freelance-rate-calculator) | Estimating cost-adjusted hourly return from a fixed-price task |
 
+## Privacy-first ingestion example
+
+The separate [Compliant Ingestion Demo](compliant-ingestion-demo/README.md) is an original, dry-run-first example for CSV exports that an operator is authorized to use. It requires source authorization and consent signals, reports aggregate decisions, and can export only minimal pseudonymous review records with an explicit flag. It does not scrape websites, discover targets, or send messages.
+
+This demo is a safety-oriented starter and **was not extracted from the HONOR MagicPad 2**. It does not certify legal compliance; the operator must verify source permissions, consent, retention, and applicable requirements.
+
 ## Applied Machine Learning & Deep Learning Lab
 
 Alongside the 100 standard-library CLI utilities, the repository includes an independent learning track using scikit-learn, NumPy, and PyTorch:
@@ -45,7 +51,7 @@ See [PORTFOLIO.md](PORTFOLIO.md) for selected projects, their scope, and limitat
 - No third-party runtime packages for the 100 numbered command-line utilities
 - A terminal such as PowerShell, Windows Terminal, or a Unix shell
 
-The supplementary ML/DL lab has its own dependency files under ml-dl-lab/.
+The supplementary ML/DL lab and privacy-first ingestion demo have their own dependency files in their respective folders.
 
 ## Tests
 
@@ -57,19 +63,20 @@ Or use Python directly:
 
     python run_all_tests.py
 
-Follow each project's README when its test command differs.
+The separate ingestion demo includes policy tests under compliant-ingestion-demo/tests/.
 
 ## Safety and publication notes
 
 - The utilities use local input/output by default.
 - Use synthetic sample data in public demonstrations.
 - Inspect files, dependencies, license terms, and test results before adapting any project for client work.
-- Never commit API keys, access tokens, passwords, private datasets, or confidential client materials.
+- Never commit API keys, access tokens, passwords, private datasets, real target lists, or delivery logs.
 - Do not present third-party code, model weights, or datasets as original work; document source links and required notices.
+- The ingestion example is not a crawler, platform connector, or outbound messaging tool.
 
 ## Repository layout
 
-Each of the 100 numbered project folders is intended to be self-contained with a source file, a README, sample JSON input/output where applicable, and tests. See Project Index for the full catalog. The supplementary ML/DL examples are kept separately in ml-dl-lab/.
+Each of the 100 numbered project folders is intended to be self-contained with a source file, a README, sample JSON input/output where applicable, and tests. Supplementary learning examples are kept in ml-dl-lab/, and the privacy-first CSV demonstration is in compliant-ingestion-demo/.
 
 ## License
 
