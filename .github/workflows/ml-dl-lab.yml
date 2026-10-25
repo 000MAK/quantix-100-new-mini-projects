@@ -4,13 +4,13 @@ on:
   push:
     paths:
       - 'ml-dl-lab/**'
+      - 'ONLINE_DATA_SOURCES.md'
       - '.github/workflows/ml-dl-lab.yml'
-      - 'OPEN_SOURCE_REFERENCES.md'
   pull_request:
     paths:
       - 'ml-dl-lab/**'
+      - 'ONLINE_DATA_SOURCES.md'
       - '.github/workflows/ml-dl-lab.yml'
-      - 'OPEN_SOURCE_REFERENCES.md'
   workflow_dispatch:
 
 permissions:
@@ -19,17 +19,17 @@ permissions:
 jobs:
   research-lab:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: ml-dl-lab/requirements-research.txt
-      - name: Install research dependencies
-        run: python -m pip install -r ml-dl-lab/requirements-research.txt
-      - name: Run research lab unit and CPU smoke tests
+          cache-dependency-path: ml-dl-lab/requirements-online.txt
+      - name: Install online research dependencies
+        run: python -m pip install -r ml-dl-lab/requirements-online.txt
+      - name: Run offline unit and model smoke tests
         run: python -m unittest discover -s ml-dl-lab -p 'test_*.py' -v
       - name: Compile lab scripts
         run: python -m compileall -q ml-dl-lab
