@@ -13,6 +13,7 @@ from typing import Any
 import numpy as np
 import torch
 from datasets import load_dataset
+from huggingface_hub import HfApi
 from PIL import Image
 from sklearn.metrics import accuracy_score, f1_score
 from torch import nn
@@ -100,8 +101,13 @@ def train_beans_demo(
         raise ValueError("batch_size must be positive and image_size must be between 32 and 256")
     seed_everything(seed)
 
-    # Downloads real public image data online on first run. The upstream data are not bundled.
-    raw = load_dataset(DATASET_ID, revision=DATASET_REVISION)
+    # Resolve and record an immutable dataset commit before downloading.
+    # The upstream images are downloaded online and are not bundled in this repository.
+    dataset_info = HfApi().dataset_info(DATASET_ID, revision=DATASET_REVISION)
+    resolved_revision = dataset_info.sha
+    if not resolved_revision:
+        raise RuntimeError("Could not resolve an immutable Hugging Face dataset revision.")
+    raw = load_dataset(DATASET_ID, revision=resolved_revision)
     required_splits = {"train", "validation", "test"}
     if not required_splits.issubset(set(raw.keys())):
         raise ValueError(f"Expected train/validation/test splits, received {list(raw.keys())}")
@@ -167,7 +173,7 @@ def train_beans_demo(
     return {
         "project": "Online Bean Leaf Image Classification — CNN",
         "dataset_id": DATASET_ID,
-        "dataset_revision": DATASET_REVISION,
+        "dataset_revision": resolved_revision,
         "dataset_card": DATASET_CARD_URL,
         "dataset_license_metadata": "MIT shown in the Hugging Face dataset card; upstream card notes about original source/licensing are incomplete—review before commercial reuse.",
         "source_data_downloaded_online": True,
