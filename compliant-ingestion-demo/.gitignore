@@ -1,0 +1,7 @@
+# Local config may contain environment-specific paths.
+config.yaml
+.env
+.env.*
+output/
+__pycache__/
+*.py[cod]
