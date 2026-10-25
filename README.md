@@ -1,6 +1,7 @@
 # Quantix — 100 Mini Python Projects
 
 [![Python utility tests](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/tests.yml/badge.svg)](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/tests.yml)
+[![ML/DL Lab CI](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/ml-dl-lab.yml/badge.svg)](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/ml-dl-lab.yml)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
