@@ -1,0 +1,6 @@
+{
+  "csv": "name,score\nAda,10\nLin,9\n",
+  "column": "score",
+  "operator": "gt",
+  "value": "9"
+}

@@ -1,0 +1,6 @@
+{
+  "principal": 1000,
+  "annual_rate": 5,
+  "years": 2,
+  "compounds_per_year": 1
+}

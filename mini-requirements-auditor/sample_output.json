@@ -1,0 +1,9 @@
+{
+  "duplicates": [
+    "requests"
+  ],
+  "packages_seen": 3,
+  "unpinned": [
+    "flask"
+  ]
+}

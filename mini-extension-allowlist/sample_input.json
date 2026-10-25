@@ -1,0 +1,7 @@
+{
+  "filename": "report.csv",
+  "allowed": [
+    "csv",
+    "json"
+  ]
+}

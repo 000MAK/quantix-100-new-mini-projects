@@ -1,0 +1,13 @@
+{
+  "duplicate_keys": [
+    "APP_MODE"
+  ],
+  "keys": [
+    "API_TOKEN",
+    "APP_MODE"
+  ],
+  "review_secret_like_values_by_key_only": [
+    "API_TOKEN"
+  ],
+  "values_disclosed": false
+}

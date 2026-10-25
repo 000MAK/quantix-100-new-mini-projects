@@ -1,0 +1,9 @@
+{
+  "value": {
+    "name": "Ada"
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}

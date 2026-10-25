@@ -1,0 +1,17 @@
+{
+  "invoice_number": "Q-100",
+  "client": "Example Co",
+  "currency": "USD",
+  "items": [
+    {
+      "description": "CSV cleanup",
+      "quantity": 1,
+      "unit_price": 25
+    },
+    {
+      "description": "QA report",
+      "quantity": 1,
+      "unit_price": 5
+    }
+  ]
+}

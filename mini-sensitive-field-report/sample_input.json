@@ -1,0 +1,9 @@
+{
+  "value": {
+    "user": {
+      "email": "person@example.test",
+      "name": "Ada"
+    },
+    "api_token": "placeholder"
+  }
+}

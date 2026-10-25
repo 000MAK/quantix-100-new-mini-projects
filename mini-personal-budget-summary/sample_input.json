@@ -1,0 +1,18 @@
+{
+  "transactions": [
+    {
+      "type": "income",
+      "amount": 2000
+    },
+    {
+      "type": "expense",
+      "amount": 100,
+      "category": "food"
+    },
+    {
+      "type": "expense",
+      "amount": 40,
+      "category": "travel"
+    }
+  ]
+}

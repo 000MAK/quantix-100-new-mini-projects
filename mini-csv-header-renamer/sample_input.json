@@ -1,0 +1,6 @@
+{
+  "csv": "first,last\nAda,Lovelace\n",
+  "rename": {
+    "first": "given_name"
+  }
+}

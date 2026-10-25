@@ -1,0 +1,14 @@
+{
+  "tasks": [
+    {
+      "minutes": 15
+    },
+    {
+      "minutes": 30
+    },
+    {
+      "minutes": 45
+    }
+  ],
+  "hourly_rate": 30
+}

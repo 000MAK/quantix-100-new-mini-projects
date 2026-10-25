@@ -1,0 +1,9 @@
+{
+  "balance": 1860.0,
+  "expenses": 140.0,
+  "expenses_by_category": {
+    "food": 100.0,
+    "travel": 40.0
+  },
+  "income": 2000.0
+}

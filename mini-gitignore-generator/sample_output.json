@@ -1,0 +1,1 @@
+"# python\n__pycache__/\n*.py[cod]\n.venv/\nvenv/\n.env\n.pytest_cache/\n# vscode\n.vscode/\n"

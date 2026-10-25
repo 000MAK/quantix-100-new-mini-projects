@@ -1,0 +1,7 @@
+{
+  "sensitive_key_paths": [
+    "api_token",
+    "user.email"
+  ],
+  "values_disclosed": false
+}

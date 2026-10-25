@@ -1,0 +1,8 @@
+{
+  "fields": {
+    "active": "boolean",
+    "id": "number",
+    "name": "string"
+  },
+  "root_type": "object"
+}

@@ -1,0 +1,11 @@
+{
+  "value": {
+    "user": {
+      "name": "Ada"
+    },
+    "scores": [
+      2,
+      3
+    ]
+  }
+}

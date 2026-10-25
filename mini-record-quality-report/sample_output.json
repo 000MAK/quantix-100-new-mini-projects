@@ -1,0 +1,8 @@
+{
+  "duplicate_records": 1,
+  "missing_by_field": {
+    "name": 1
+  },
+  "quality_pass": false,
+  "records": 3
+}

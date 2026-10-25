@@ -1,0 +1,11 @@
+{
+  "mean": 28.6,
+  "outliers": [
+    {
+      "index": 4,
+      "value": 100.0,
+      "z_score": 1.9996
+    }
+  ],
+  "population_stddev": 35.70770225035489
+}

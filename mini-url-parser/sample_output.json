@@ -1,0 +1,9 @@
+{
+  "credentials_discarded": true,
+  "fragment_present": false,
+  "host": "example.test",
+  "path": "/path",
+  "port": 8443,
+  "query_present": true,
+  "scheme": "https"
+}

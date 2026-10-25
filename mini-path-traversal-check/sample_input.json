@@ -1,0 +1,7 @@
+{
+  "paths": [
+    "data/input.csv",
+    "../secret.txt",
+    "C:\\Windows\\system.ini"
+  ]
+}

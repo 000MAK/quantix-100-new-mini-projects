@@ -1,0 +1,14 @@
+[
+  {
+    "path": "data/input.csv",
+    "safe_relative": true
+  },
+  {
+    "path": "../secret.txt",
+    "safe_relative": false
+  },
+  {
+    "path": "C:\\Windows\\system.ini",
+    "safe_relative": false
+  }
+]

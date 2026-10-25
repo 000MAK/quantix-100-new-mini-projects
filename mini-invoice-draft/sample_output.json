@@ -1,0 +1,5 @@
+{
+  "currency": "USD",
+  "markdown": "# Invoice Q-100\nClient: Example Co\n\n| Item | Qty | Unit price | Total |\n|---|---:|---:|---:|\n| CSV cleanup | 1 | 25.00 USD | 25.00 USD |\n| QA report | 1 | 5.00 USD | 5.00 USD |\n\n**Total due: 30.00 USD**\n\nDraft only; verify tax and legal requirements before use.",
+  "total": 30.0
+}

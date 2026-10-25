@@ -1,0 +1,14 @@
+[
+  {
+    "member": "docs/readme.txt",
+    "safe": true
+  },
+  {
+    "member": "../../evil.txt",
+    "safe": false
+  },
+  {
+    "member": "C:\\temp\\x",
+    "safe": false
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "csv": "name,score,city\nAda,10,Ankara\n",
+  "columns": [
+    "name",
+    "city"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "path": "data/input.csv",
+  "reason": "relative path accepted",
+  "safe": true
+}

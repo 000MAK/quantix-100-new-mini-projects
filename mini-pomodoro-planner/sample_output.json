@@ -1,0 +1,23 @@
+{
+  "blocks": [
+    {
+      "end_minute": 25,
+      "session": 1,
+      "start_minute": 0,
+      "type": "work"
+    },
+    {
+      "after_session": 1,
+      "end_minute": 30,
+      "start_minute": 25,
+      "type": "break"
+    },
+    {
+      "end_minute": 55,
+      "session": 2,
+      "start_minute": 30,
+      "type": "work"
+    }
+  ],
+  "total_minutes": 55
+}

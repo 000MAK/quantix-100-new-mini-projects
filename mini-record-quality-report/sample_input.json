@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "name": "Ada"
+    },
+    {
+      "id": 2,
+      "name": ""
+    },
+    {
+      "id": 1,
+      "name": "Ada"
+    }
+  ],
+  "required_fields": [
+    "id",
+    "name"
+  ]
+}

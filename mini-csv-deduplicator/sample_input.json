@@ -1,0 +1,6 @@
+{
+  "csv": "id,name\n1,Ada\n1,Ada\n2,Lin\n",
+  "key_columns": [
+    "id"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "value": {
+    "name": "Ada",
+    "nested": {
+      "token": "secret"
+    }
+  },
+  "fields": [
+    "token"
+  ]
+}

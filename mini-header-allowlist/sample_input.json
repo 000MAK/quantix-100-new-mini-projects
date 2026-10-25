@@ -1,0 +1,13 @@
+{
+  "headers": [
+    "content-type",
+    "x-request-id"
+  ],
+  "allowed": [
+    "content-type",
+    "x-request-id"
+  ],
+  "required": [
+    "content-type"
+  ]
+}

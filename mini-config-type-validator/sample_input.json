@@ -1,0 +1,10 @@
+{
+  "config": {
+    "port": 8000,
+    "debug": true
+  },
+  "required_types": {
+    "port": "int",
+    "debug": "bool"
+  }
+}

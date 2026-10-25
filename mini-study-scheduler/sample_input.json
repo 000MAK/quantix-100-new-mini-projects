@@ -1,0 +1,13 @@
+{
+  "total_minutes": 100,
+  "subjects": [
+    {
+      "name": "Math",
+      "weight": 2
+    },
+    {
+      "name": "English",
+      "weight": 1
+    }
+  ]
+}

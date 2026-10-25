@@ -1,0 +1,7 @@
+{
+  "paths": [
+    "src/main.py",
+    "src/util.py",
+    "README.md"
+  ]
+}

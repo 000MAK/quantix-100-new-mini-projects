@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "name": "a.txt",
+      "content": "same"
+    },
+    {
+      "name": "b.txt",
+      "content": "same"
+    },
+    {
+      "name": "c.txt",
+      "content": "other"
+    }
+  ]
+}

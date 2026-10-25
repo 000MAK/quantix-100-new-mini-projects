@@ -1,0 +1,8 @@
+{
+  "budget": 1000,
+  "percentages": {
+    "needs": 50,
+    "wants": 30,
+    "savings": 20
+  }
+}
