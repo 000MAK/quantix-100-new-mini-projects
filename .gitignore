@@ -11,3 +11,21 @@ logs/
 .data/
 .DS_Store
 Thumbs.db
+
+
+# Generated local model reports and outputs
+results/
+reports/generated/
+
+# Downloaded datasets and local model checkpoints (do not commit)
+data_cache/
+dataset_cache/
+models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Local media/data samples; public demo assets should live in reviewed project folders
+*.wav
+*.mp3
