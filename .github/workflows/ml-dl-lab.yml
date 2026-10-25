@@ -5,6 +5,7 @@ on:
     paths:
       - 'ml-dl-lab/**'
       - 'ONLINE_DATA_SOURCES.md'
+      - 'OPEN_SOURCE_REFERENCES.md'
       - '.github/workflows/ml-dl-lab.yml'
   pull_request:
     paths:
