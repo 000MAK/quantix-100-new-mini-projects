@@ -1,0 +1,5 @@
+record_id,source,source_authorized,consent_status,locale,currency
+synthetic-001,example_partner_feed,true,granted,en-US,USD
+synthetic-002,example_partner_feed,false,granted,en-GB,GBP
+synthetic-003,example_partner_feed,true,missing,fr-FR,EUR
+synthetic-004,example_partner_feed,yes,explicit_opt_in,tr-TR,TRY
