@@ -1,14 +1,22 @@
 # Quantix — 100 Mini Python Projects
 
+[![Python utility tests](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/tests.yml/badge.svg)](https://github.com/000MAK/quantix-100-new-mini-projects/actions/workflows/tests.yml)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 A collection of 100 small, independent Python command-line utilities created as practical coding and automation demonstrations.
 
-**Independent demonstration collection** · Python 3.10+ · Standard library only for the 100 numbered CLI utilities · MIT license
+**Independent demonstration collection** · Python 3.10+ · Standard library only for the 100 numbered CLI utilities
 
-## Highlights
+## Start here
 
-The collection covers small, focused tasks such as text processing, validation, file utilities, date and numeric helpers, and CSV/JSON handling. See the complete Project Index for all 100 entries.
+- [Project index](PROJECT_INDEX.md) — all 100 utilities
+- [Curated portfolio](PORTFOLIO.md) — selected projects and scope
+- [Applied ML & Deep Learning Lab](ml-dl-lab/README.md) — classification, clustering, PyTorch and Hugging Face examples
+- [Privacy-First Ingestion Demo](compliant-ingestion-demo/README.md) — authorized CSV ingestion, dry-run default, minimized review output
+- [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md) · [Open-source attribution](OPEN_SOURCE_REFERENCES.md)
 
-### Selected utility examples
+## Selected utility examples
 
 | Project | What it demonstrates |
 |---|---|
@@ -18,6 +26,8 @@ The collection covers small, focused tasks such as text processing, validation, 
 | [Mini Log Redactor](https://github.com/000MAK/mini-log-redactor) | Redacting common token-like patterns from diagnostic text before review |
 | [Mini Expense Tracker](https://github.com/000MAK/mini-expense-tracker) | Local SQLite expense entries and totals grouped by currency |
 | [Mini Freelance Rate Calculator](https://github.com/000MAK/mini-freelance-rate-calculator) | Estimating cost-adjusted hourly return from a fixed-price task |
+
+These are compact learning and utility projects, not claims that every tool is production-ready for every environment. Review each project's own README, constraints, and tests before relying on it.
 
 ## Privacy-first ingestion example
 
@@ -41,43 +51,22 @@ Alongside the 100 standard-library CLI utilities, the repository includes an ind
 
 The Hugging Face example does not redistribute model weights or claim the pretrained model as original work. It downloads model files from the Hub on first run. Check the upstream model card and license before reuse. All examples in this lab are educational, not production systems or claims of real-world model performance.
 
-## Curated portfolio
+## Run the 100 utility tests
 
-See [PORTFOLIO.md](PORTFOLIO.md) for selected projects, their scope, and limitations.
-
-## Requirements
-
-- Python 3.10+
-- No third-party runtime packages for the 100 numbered command-line utilities
-- A terminal such as PowerShell, Windows Terminal, or a Unix shell
-
-The supplementary ML/DL lab and privacy-first ingestion demo have their own dependency files in their respective folders.
-
-## Tests
-
-From the repository root on Windows PowerShell:
-
-    .\run_all_tests.ps1
-
-Or use Python directly:
+From the repository root:
 
     python run_all_tests.py
 
-The separate ingestion demo includes policy tests under compliant-ingestion-demo/tests/.
+The GitHub Actions workflow runs the utility test suite and compiles Python files on pushes and pull requests. The ingestion demo's separate policy tests are located in compliant-ingestion-demo/tests/ and have their own dependencies.
 
 ## Safety and publication notes
 
-- The utilities use local input/output by default.
 - Use synthetic sample data in public demonstrations.
 - Inspect files, dependencies, license terms, and test results before adapting any project for client work.
 - Never commit API keys, access tokens, passwords, private datasets, real target lists, or delivery logs.
 - Do not present third-party code, model weights, or datasets as original work; document source links and required notices.
 - The ingestion example is not a crawler, platform connector, or outbound messaging tool.
 
-## Repository layout
-
-Each of the 100 numbered project folders is intended to be self-contained with a source file, a README, sample JSON input/output where applicable, and tests. Supplementary learning examples are kept in ml-dl-lab/, and the privacy-first CSV demonstration is in compliant-ingestion-demo/.
-
 ## License
 
-MIT. See LICENSE for this repository's original project content. Third-party assets and dependencies may be governed by separate licenses; see OPEN_SOURCE_REFERENCES.md.
+MIT for original content in this repository; third-party assets and dependencies may be governed by separate licenses. See [LICENSE](LICENSE) and [OPEN_SOURCE_REFERENCES.md](OPEN_SOURCE_REFERENCES.md).
