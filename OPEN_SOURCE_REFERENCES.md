@@ -33,3 +33,7 @@ Review the upstream model card and applicable notices before commercial use or r
 ## Why this file exists
 
 Hugging Face model cards are intended to document model details, intended use, limitations, training information, and license metadata. See https://huggingface.co/docs/hub/en/model-cards for guidance.
+
+## Online dataset inventory
+
+For the public UCI datasets, Beans image data, Free Spoken Digit Dataset, source URLs, declared licenses, attribution, and caveats, see [ONLINE_DATA_SOURCES.md](ONLINE_DATA_SOURCES.md). The new model scripts download datasets at runtime and do not commit dataset files or trained weights.
