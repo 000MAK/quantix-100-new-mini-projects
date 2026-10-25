@@ -21,6 +21,10 @@ The collection covers small, focused tasks such as text processing, validation, 
 
 These are compact learning and utility projects, not claims that every tool is production-ready for every environment. Review each project's own README, constraints, and tests before relying on it.
 
+## Curated portfolio
+
+See [PORTFOLIO.md](PORTFOLIO.md) for a curated overview of selected public Quantix demonstration projects and their scope/limitations.
+
 ## Requirements
 
 - Python 3.10+
