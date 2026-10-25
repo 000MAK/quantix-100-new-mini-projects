@@ -43,6 +43,16 @@ Alongside the 100 standard-library CLI utilities, the repository includes an ind
 - [Unsupervised clustering](ml-dl-lab/clustering_demo.py) — K-Means on generated synthetic data, with clustering metrics.
 - [Neural-network digit classification](ml-dl-lab/dl_digits_classifier.py) — a PyTorch multilayer perceptron trained on the built-in Digits dataset.
 
+
+- [Twenty-model online-data benchmark](ml-dl-lab/run_20_models.py) — twenty statistical and ML experiments using online UCI Wine Quality and Bike Sharing data, including classification, regression, PCA, GMM, anomaly screening, Poisson count models, quantile modeling, and EVT.
+- [Online Beans image CNN](ml-dl-lab/vision_beans_cnn.py) — downloads the Beans dataset from Hugging Face and trains a small 2-D CNN.
+- [Online FSDD audio CNN](ml-dl-lab/audio_fsdd_cnn.py) — downloads the version-tagged Free Spoken Digit Dataset and trains a 1-D CNN for spoken-digit classification.
+- [Dataset source and license register](ONLINE_DATA_SOURCES.md) — original source URLs, licenses, model/data attribution, and caveats.
+- [Twenty-model and image/audio lab README](ml-dl-lab/README.md) — full setup, usage, test, and limitations guide.
+
+The twenty-model suite and the image/audio projects download public data at runtime. Datasets, downloaded archives, and trained weights are not committed. The Beans dataset card has incomplete information about the original source license; review the source terms before commercial reuse. Audio use is attributed to FSDD under its stated CC BY-SA 4.0 terms. These are demonstrations, not production systems.
+
+
 ### Hugging Face NLP example
 
 - [English sentiment classification](ml-dl-lab/huggingface_sentiment.py) — an original CLI wrapper using Transformers to run the publicly hosted DistilBERT SST-2 model.
