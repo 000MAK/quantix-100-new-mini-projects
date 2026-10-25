@@ -1,0 +1,19 @@
+# Example only. Copy to config.yaml for local use; do not put credentials in this file.
+input_path: data/example_authorized_export.csv
+output_path: output/review_queue.csv
+
+policy:
+  authorized_source_values:
+    - "true"
+    - "yes"
+    - "1"
+  allowed_consent_statuses:
+    - "granted"
+    - "explicit_opt_in"
+  max_rows: 5000
+
+output:
+  require_hmac_key: true
+  review_status: "needs_human_review"
+
+# Intentionally no scraper endpoints, platform credentials, or outbound messaging settings.
