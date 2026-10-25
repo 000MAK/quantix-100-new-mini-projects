@@ -1,75 +1,85 @@
-# Applied Machine Learning & Deep Learning Lab
+# Quantix Applied Statistics, Machine Learning & Deep Learning Lab
 
-A small learning track that complements the Quantix command-line utilities. It contains original demonstration code using built-in or synthetic datasets, plus one optional NLP example that uses a third-party pretrained model with explicit attribution.
+A reproducible research portfolio for applied statistics, actuarial-risk methods, quantitative finance, machine learning, computer vision, and audio signal classification.
 
-## Projects
+**Data policy:** all new model experiments use deterministic synthetic data generated locally at runtime. They do not download, bundle, or redistribute customer datasets, market data, image collections, or audio recordings.
 
-### 1. Supervised classification — ml_classification.py
+**Scope:** independent demonstrations for learning and engineering review. They are not certified actuarial, regulatory, medical, investment, or production decision systems. Metrics reported by the new experiments are measured on synthetic holdout sets and are not evidence of real-world predictive performance.
 
-Compares Logistic Regression and Random Forest in scikit-learn on the built-in Wine dataset. Preprocessing is placed inside a pipeline to avoid fitting the scaler on the test set. Reports balanced accuracy, macro-F1, and a classification report.
+## Ten statistical and machine-learning models
 
-### 2. Unsupervised clustering — clustering_demo.py
+Install dependencies from the repository root:
 
-Runs K-Means on reproducibly generated synthetic blobs. Reports silhouette score and adjusted Rand index. The known synthetic labels are used only to evaluate the clustering, not as model inputs.
+    python -m pip install -r ml-dl-lab/requirements-research.txt
 
-### 3. Neural network image classification — dl_digits_classifier.py
+Run all ten model demonstrations:
 
-Trains a small PyTorch multilayer perceptron on scikit-learn's built-in 8×8 handwritten-digits dataset. Uses train/validation/test splits, a fixed random seed, and validation-loss-based early stopping.
+    python ml-dl-lab/research_models.py
 
-### 4. Hugging Face NLP — huggingface_sentiment.py
+| # | Model | Why it fits this portfolio | Main diagnostic |
+|---:|---|---|---|
+| 1 | Tweedie GLM | Zero-heavy aggregate loss / pure-premium modeling concept | MAE and Tweedie deviance |
+| 2 | Poisson Regression | Claim-frequency modeling with count outcomes | Mean Poisson deviance and MAE |
+| 3 | Logistic Regression | Binary claim-occurrence risk baseline | ROC-AUC and probability MAE |
+| 4 | Random Forest Regression | Nonlinear severity modeling baseline | MAE and RMSE |
+| 5 | Gradient Boosting Quantile Regression | Upper-quantile risk/reserving illustration | Pinball loss and empirical coverage |
+| 6 | Isolation Forest | Unsupervised anomaly-screening demonstration | Precision/recall against synthetic labels |
+| 7 | Gaussian Mixture Model | Regime segmentation on synthetic multivariate observations | Adjusted Rand Index |
+| 8 | Peaks-over-Threshold / Generalized Pareto Distribution | Extreme-value tail modeling illustration | Fitted shape/scale and synthetic 99% tail quantile |
+| 9 | Long-only Minimum-Variance Portfolio | Portfolio construction using Ledoit–Wolf covariance shrinkage | Weight constraints and estimated volatility |
+| 10 | Principal Component Analysis | Dimensionality reduction and reconstruction diagnostic | Explained variance and test reconstruction MSE |
 
-Runs English positive/negative sentiment inference with DistilBERT fine-tuned on SST-2 via the Transformers pipeline API. The small CLI wrapper is original; the third-party model is linked and attributed in OPEN_SOURCE_REFERENCES.md. The script does not upload or mirror model weights.
+The insurance tasks use generated covariates and generated claim counts/losses. The GPD demonstration generates heavy-tailed synthetic losses. Portfolio returns are generated locally, not downloaded from an exchange. Synthetic results must not be used to price real insurance, estimate actual reserves, or recommend investments.
 
-The model is English-focused. Its output score is not a calibrated real-world probability and should not be used as a general-purpose moderation or high-stakes decision system.
+## Deep learning demos: vision and audio
 
-## Requirements
+### A. Synthetic Shape Recognition — 2-D CNN
 
-- Python 3.10+
-- scikit-learn
-- NumPy
-- PyTorch for the deep-learning examples
-- Transformers for the optional Hugging Face example
+    python ml-dl-lab/vision_shapes_cnn.py --samples 360 --epochs 8
 
-The core Quantix CLI utilities remain separate and use the Python standard library. These ML/DL demos need additional packages listed in the requirements files.
+Trains a small convolutional neural network to recognize horizontal bars, vertical bars, and diagonal shapes in procedurally generated grayscale images with noise. No image dataset or pretrained weights are downloaded.
 
-## Run locally
+### B. Synthetic Audio Signal Classification — 1-D CNN
 
-From the repository root, create and activate a virtual environment.
+    python ml-dl-lab/audio_signal_cnn.py --samples 420 --epochs 8
 
-Windows PowerShell:
+Trains a 1-D convolutional network to distinguish synthetic noisy low-, mid-, and high-frequency tone mixtures. The signal is generated in memory; the demo does not access a microphone, use real recordings, or infer speech, identity, health, or emotion.
 
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
+Both demos use fixed random seeds and held-out test splits. Their accuracy measures learning on synthetic patterns only. They do not demonstrate performance on real-world images or recordings.
 
-macOS/Linux:
+## Existing lab examples
 
-    python -m venv .venv
-    source .venv/bin/activate
+- ml_classification.py — Logistic Regression and Random Forest using scikit-learn's bundled Wine dataset. Source and attribution notes are in ../OPEN_SOURCE_REFERENCES.md.
+- clustering_demo.py — K-Means on reproducibly generated synthetic clusters.
+- dl_digits_classifier.py — PyTorch MLP using scikit-learn's bundled 8×8 Digits dataset. See the attribution notes before redistributing data.
+- huggingface_sentiment.py — optional English sentiment inference with an external pretrained model; requires separate dependencies and can download model files on first use. See the attribution file and upstream model card.
 
-Install dependencies for the built-in/synthetic examples:
+## Tests
 
-    python -m pip install -r ml-dl-lab/requirements.txt
+From the repository root, after installing research dependencies:
 
-Run one of those examples from the repository root:
+    python -m unittest discover -s ml-dl-lab -p 'test_*.py' -v
 
-    python ml-dl-lab/ml_classification.py
-    python ml-dl-lab/clustering_demo.py
-    python ml-dl-lab/dl_digits_classifier.py
+These tests exercise the ten model outputs and portfolio weight constraints, validate the synthetic data shapes, and run tiny CPU smoke tests for both CNNs. No external network calls are made by these new tests.
 
-For the optional Hugging Face sentiment example, install its additional requirements:
+## Reproducibility and safety
 
-    python -m pip install -r ml-dl-lab/requirements-hf.txt
+- Random seeds are explicit and can be changed in each command-line interface.
+- Model metrics are calculated on held-out synthetic data.
+- The code does not publish model weights or save generated training data.
+- The demos do not access APIs, collect personal data, or execute client-provided code.
+- Review assumptions and output quality before extending any example to real datasets.
 
-Then run it with a short English sentence:
+## Attribution and licensing
 
-    python ml-dl-lab/huggingface_sentiment.py "The explanation was clear and useful."
+- Original scripts and synthetic-data generation in this lab are released under the repository-level MIT license in ../LICENSE.
+- NumPy: BSD-3-Clause; upstream license: https://github.com/numpy/numpy/blob/main/LICENSE.txt.
+- SciPy: BSD-3-Clause; upstream license: https://github.com/scipy/scipy/blob/main/LICENSE.txt.
+- scikit-learn: BSD-3-Clause; upstream license: https://github.com/scikit-learn/scikit-learn/blob/main/COPYING.
+- PyTorch: BSD-style license; upstream license: https://github.com/pytorch/pytorch/blob/main/LICENSE.
+- No external dataset, image, audio recording, or pretrained model is bundled for the new synthetic-data experiments.
+- For the pre-existing Hugging Face sentiment demo, see ../OPEN_SOURCE_REFERENCES.md and the upstream model card. The pretrained model and its weights are not represented as original work.
 
-The first run downloads the model from Hugging Face and caches it locally. The model then runs through the local Transformers pipeline; it is not an API call to a hosted inference endpoint. Internet access is needed for the initial download unless the model is already cached.
+## Suggested next step for real research
 
-## Third-party attribution
-
-See [OPEN_SOURCE_REFERENCES.md](../OPEN_SOURCE_REFERENCES.md) for model origin, listed license, libraries, and further-reading links. Third-party assets are not presented as original work, and no model weights are bundled in this repository.
-
-## Scope and limitations
-
-These are educational baselines, not production systems. Results depend on data, splits, dependency versions, and random seeds. Small teaching datasets do not establish real-world generalization. Check each upstream model card, license, and applicable notices before adapting an asset, especially for commercial use.
+Only after the synthetic baselines are reviewed should a separate licensed dataset adapter be added. It should document data provenance, exact license/terms, input schema, an explicit train/validation/test protocol, leakage checks, calibration and baseline comparisons, and domain review. Keep synthetic demonstration metrics separate from any future real-world performance claims.
