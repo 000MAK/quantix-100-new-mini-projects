@@ -1,16 +1,35 @@
-# 100 New Mini Python Projects — Safe GitHub Starter Pack
+# Quantix — 100 Mini Python Projects
 
-100 independent, small Python command-line utilities. Each project is self-contained in its own folder with `main.py`, `README.md`, sample JSON input/output, and unit tests.
+A collection of 100 small, independent Python command-line utilities created as practical coding and automation demonstrations.
+
+**Independent demonstration collection** · Python 3.10+ · Standard library only for runtime · MIT license
+
+## Highlights
+
+The collection covers small, focused tasks such as text processing, validation, file utilities, date and numeric helpers, and CSV/JSON handling. See the complete [Project Index](PROJECT_INDEX.md) for all 100 entries.
+
+### Selected examples
+
+| Project | What it demonstrates |
+|---|---|
+| [Mini CSV Cleaner](https://github.com/000MAK/mini-csv-cleaner) | Whitespace cleanup, blank-row skipping, optional duplicate-row removal, and non-destructive output handling |
+| [Mini JSON–CSV Converter](https://github.com/000MAK/mini-json-csv-converter) | Converting JSON arrays of objects and CSV records with explicit headers |
+| [Mini File Organizer](https://github.com/000MAK/mini-file-organizer) | A dry-run-first file-move plan with an explicit apply option |
+| [Mini Log Redactor](https://github.com/000MAK/mini-log-redactor) | Redacting common token-like patterns from diagnostic text before review |
+| [Mini Expense Tracker](https://github.com/000MAK/mini-expense-tracker) | Local SQLite expense entries and totals grouped by currency without assuming FX rates |
+| [Mini Freelance Rate Calculator](https://github.com/000MAK/mini-freelance-rate-calculator) | Estimating cost-adjusted hourly return from a fixed-price task |
+
+These are compact learning and utility projects, not claims that every tool is production-ready for every environment. Review each project's own README, constraints, and tests before relying on it.
+
+## Requirements
 
 - Python 3.10+
-- Standard library only; no runtime pip packages
-- Local-only input/output by default
-- No platform scraping, automated bids, credential collection, or client-code execution
-- Includes GitHub Actions CI and Claude Code instructions
+- No third-party runtime packages for the included command-line utilities
+- A terminal such as PowerShell, Windows Terminal, or a Unix shell
 
-## Quick start
+## Run one project
 
-Run one project:
+Choose a project folder from the index, then follow that folder's README. For example:
 
 ```bash
 cd mini-word-counter
@@ -18,28 +37,34 @@ python main.py sample_input.json
 python -m unittest -v
 ```
 
-Run the full test suite from the root:
+## Run the collection tests
+
+From the repository root on Windows PowerShell:
 
 ```powershell
 .\run_all_tests.ps1
 ```
 
-or cross-platform:
+Or use Python directly:
 
 ```bash
 python run_all_tests.py
 ```
 
-## The 100 projects
+If a particular test command differs, follow the instructions in that project's README.
 
-See [`PROJECT_INDEX.md`](PROJECT_INDEX.md) for the full catalog. All names are unique to this pack and separate from the prior 10-project starter pack.
+## Safety and publication notes
 
-## Publish strategy
+- The utilities are designed for local input/output by default.
+- The collection does not contain platform scraping, automatic bidding, credential collection, or execution of client-supplied code.
+- Use synthetic sample data in public demonstrations.
+- Inspect files, dependencies, license terms, and test results before adapting any project for client work.
+- Never commit API keys, access tokens, passwords, private datasets, or confidential client materials.
 
-Recommended first: publish this collection as one repository named `quantix-100-new-mini-projects`. It is easier to maintain and avoids creating 100 nearly empty repositories at once. If you choose to split them into separate repositories, use `publish_all.ps1` only after `gh auth login`; it intentionally checks for name collisions and stops rather than overwriting an existing remote repository.
+## Repository layout
 
-The publication script defaults to **private** repositories. Use `-Visibility public` only after reviewing the code and license. A GitHub account and authenticated GitHub CLI session are required; this package does not contain credentials.
+Each of the 100 project folders is intended to be self-contained with a source file, a README, sample JSON input/output where applicable, and unit tests. See [PROJECT_INDEX.md](PROJECT_INDEX.md) for the full catalog.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See [LICENSE](LICENSE).
