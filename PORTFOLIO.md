@@ -22,6 +22,14 @@ Previews a file-move plan by extension; applying moves requires an explicit opti
 - Repository: https://github.com/000MAK/mini-file-organizer
 - Stack: Python standard library
 
+## Privacy-first ingestion example
+
+- Repository: [compliant-ingestion-demo](compliant-ingestion-demo/README.md)
+- Purpose: validates an operator-provided CSV export against source-authorization and consent attestations, reports aggregate outcomes, and optionally writes a minimal pseudonymous review queue.
+- Safety defaults: dry-run unless explicitly applied; no scraping connectors, target discovery, or outbound messaging.
+- Data minimization: raw record identifiers are not written to the review queue; the output omits contact data.
+- Scope: an educational example, not legal compliance certification. It has not been extracted from the HONOR tablet's unreviewed files.
+
 ## Applied ML & Deep Learning Lab
 
 These are educational examples, separate from the 100 numbered CLI utilities.
