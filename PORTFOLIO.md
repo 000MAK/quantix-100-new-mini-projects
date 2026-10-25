@@ -32,6 +32,28 @@ A separate educational learning track with four examples.
 
 These are educational examples, not claims of production performance or real-world generalization. External models and libraries remain attributed to their respective owners.
 
+## Online-data statistics and multimodal deep learning
+
+### Twenty-model statistical and ML benchmark
+Runs twenty model comparisons using public UCI Wine Quality and Bike Sharing data fetched online. Includes classification, regression, PCA, Gaussian mixture segmentation, anomaly screening, Poisson count modeling, quantile regression, EVT and chronological demand forecasting.
+
+- Runner: [ml-dl-lab/run_20_models.py](ml-dl-lab/run_20_models.py)
+- Guide: [ml-dl-lab/README.md](ml-dl-lab/README.md)
+- Data sources and licenses: [ONLINE_DATA_SOURCES.md](ONLINE_DATA_SOURCES.md)
+
+### Bean leaf image classification
+A small 2-D CNN downloads the Beans image dataset from Hugging Face and trains on official train/validation/test splits. The dataset card's metadata says MIT, but details about the original source's licensing are incomplete; the demo does not redistribute the images. Review source terms before commercial reuse.
+
+- Code: [ml-dl-lab/vision_beans_cnn.py](ml-dl-lab/vision_beans_cnn.py)
+- Dataset: https://huggingface.co/datasets/AI-Lab-Makerere/beans
+
+### Spoken digit audio classification
+A small 1-D CNN downloads the version-tagged Free Spoken Digit Dataset, uses its documented train/test index split, and classifies the ten English spoken digits. It does not publish audio recordings or model weights. The upstream source states CC BY-SA 4.0 and possible speaker overlap across train/test means speaker-independent performance is not claimed.
+
+- Code: [ml-dl-lab/audio_fsdd_cnn.py](ml-dl-lab/audio_fsdd_cnn.py)
+- Dataset: https://github.com/Jakobovski/free-spoken-digit-dataset
+
+
 ## Data privacy and safe ingestion
 
 ### Privacy-First Ingestion Demo
