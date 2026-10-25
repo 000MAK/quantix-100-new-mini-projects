@@ -1,8 +1,8 @@
 # Quantix Project Portfolio
 
-This page highlights selected small Python utilities published as independent demonstration projects. They illustrate focused data-processing, file-safety, validation, and automation patterns. They are not presented as paid client engagements or as a claim that every project is production-ready for every use case.
+This page highlights selected small Python utilities and learning projects published as independent demonstrations. They illustrate focused data-processing, file-safety, validation, automation, and introductory ML/DL workflows. They are not presented as paid client engagements or as a claim that every project is production-ready for every use case.
 
-## Selected projects
+## Selected Python utilities
 
 ### 1. Mini CSV Cleaner
 Trims leading and trailing whitespace, skips fully blank rows, and optionally removes duplicate rows after trimming. It keeps the source file intact and refuses to overwrite an existing destination.
@@ -26,7 +26,7 @@ Reports repeated non-empty lines and their occurrence counts.
 - Useful for: quick text-file diagnostics
 
 ### 4. Mini File Organizer
-Builds a proposed file-move plan by file extension. It previews the plan by default; file moves require the explicit `--apply` flag.
+Builds a proposed file-move plan by file extension. It previews the plan by default; file moves require the explicit --apply flag.
 
 - Repository: https://github.com/000MAK/mini-file-organizer
 - Stack: Python 3.10+, Python standard library
@@ -53,13 +53,37 @@ Estimates cost-adjusted earnings per hour from an example fixed-price task using
 - Stack: Python 3.10+, Python standard library
 - Useful for: transparent task-pricing arithmetic
 
+## Applied ML & Deep Learning Lab
+
+These are introductory educational examples, kept separate from the 100 numbered CLI utilities.
+
+### 1. Supervised classification
+- Code: [ml_classification.py](ml-dl-lab/ml_classification.py)
+- Methods: Logistic Regression and Random Forest
+- Data: scikit-learn's built-in Wine dataset
+- Practice: train/test separation, preprocessing pipelines, balanced accuracy, and macro-F1
+
+### 2. Unsupervised clustering
+- Code: [clustering_demo.py](ml-dl-lab/clustering_demo.py)
+- Method: K-Means
+- Data: reproducibly generated synthetic blobs
+- Practice: scaling, silhouette score, and adjusted Rand index
+
+### 3. Neural-network image classification
+- Code: [dl_digits_classifier.py](ml-dl-lab/dl_digits_classifier.py)
+- Framework: PyTorch
+- Data: scikit-learn's built-in 8×8 Digits dataset
+- Practice: train/validation/test splits, a multilayer perceptron, validation-loss-based early stopping, and a held-out test report
+
+Install the additional packages using [ml-dl-lab/requirements.txt](ml-dl-lab/requirements.txt). See the [lab guide](ml-dl-lab/README.md) for run instructions. These small datasets are useful for learning and reproducibility, not for claiming production performance or generalization to real-world data.
+
 ## Larger collection
 
 The [Quantix 100 Mini Python Projects](https://github.com/000MAK/quantix-100-new-mini-projects) repository indexes 100 small command-line utilities. Review the per-project README and tests before relying on any utility in a production workflow.
 
 ## Approach
 
-My project style favors small, inspectable utilities, explicit inputs, deterministic transformations where applicable, non-destructive output handling, and clear statements of limitations. For data-cleaning work, ambiguous records should be flagged rather than silently interpreted.
+My project style favors small, inspectable utilities, explicit inputs, deterministic transformations where applicable, non-destructive output handling, and clear statements of limitations. For data-cleaning work, ambiguous records should be flagged rather than silently interpreted. For ML/DL examples, preprocessing and evaluation are documented so that the educational scope is clear.
 
 ## Contact and freelance scope
 
